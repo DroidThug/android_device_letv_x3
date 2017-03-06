@@ -1,0 +1,5 @@
+```
+cd WORKING_DIR
+sh device/letv/x3/patches/install.sh
+sh device/letv/x3/patches/uninstall.sh
+```
