@@ -164,7 +164,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.mal.rc:root/init.mal.rc \
     $(LOCAL_PATH)/ramdisk/init.usb.configfs:root/init.usb.configfs.rc \
     $(LOCAL_PATH)/ramdisk/init.trustonic.rc:root/init.trustonic.rc \
-
+    $(LOCAL_PATH)/rootdir/audioserver.rc:/system/etc/init/audioserver.rc
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \

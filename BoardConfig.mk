@@ -27,6 +27,9 @@ TARGET_NO_BOOTLOADER := true
 
 TARGET_BOARD_PLATFORM := mt6795
 
+# Audioserver
+TARGET_PROVIDES_AUDIOSERVER_RC := true
+
 #TARGET_LDPRELOAD += libxlog.so
 # CPU
 ifeq ($(FORCE_32_BIT),true)
