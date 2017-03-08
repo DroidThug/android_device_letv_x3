@@ -1,7 +1,7 @@
 #!/bin/bash
 
-VENDOR=LeTV
-DEVICE=x500
+VENDOR=letv
+DEVICE=x3
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

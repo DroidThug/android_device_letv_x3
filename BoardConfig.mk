@@ -142,7 +142,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 
 # RIL
 BOARD_PROVIDES_RILD := true
-BOARD_RIL_CLASS := ../../../device/LeTV/x500/ril
+BOARD_RIL_CLASS := ../../../device/letv/x3/ril
 BOARD_CONNECTIVITY_MODULE := conn_soc
 
 # Display
@@ -199,7 +199,7 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # SELinux
 BOARD_SEPOLICY_DIRS := \
-    device/LeTV/x500/sepolicy
+    device/letv/x3/sepolicy
 
 # Seccomp Filter
 BOARD_SEPOLICY_DIRS += \

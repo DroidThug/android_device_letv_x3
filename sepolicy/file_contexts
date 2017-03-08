@@ -521,7 +521,9 @@
 /dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/boot	        u:object_r:boot_block_device:s0
 /dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/persist           u:object_r:persist_block_device:s0
 /dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/system            u:object_r:system_block_device:s0
-#line 1 "device/Letv/X500/sepolicy/file_contexts"
+
+
+# SEPolicy from device/letv/x3/sepolicy/file_contexts
 
 # secblock @Bule 20161119
 /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/security      u:object_r:secblock_device:s0
@@ -533,7 +535,8 @@
 
 # Device files
 /dev/goodix_fp                 u:object_r:goodixfingerprintd_device:s0
-# Goodix librarires
+
+# Goodix libraries
 /system/lib64/libMcClient.so  u:object_r:mobicore_lib_file:s0
 /system/lib/libMcClient.so  u:object_r:mobicore_lib_file:s0
 /system/lib64/libMcRegistry.so  u:object_r:mobicore_lib_file:s0
@@ -554,4 +557,3 @@
 
 # Executable binary of goodix
 /system/bin/goodixfingerprintd u:object_r:goodixfingerprintd_exec:s0
-

@@ -1,5 +1,5 @@
 #
-# system.prop for LeTV x500
+# system.prop for Letv x3
 #
 
 rild.libpath=mtk-ril.so
