@@ -65,6 +65,15 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
+MTK_PROJECT_CONFIG ?= $(LOCAL_PATH)/etc/ProjectConfig.mk 
+include $(MTK_PROJECT_CONFIG)
+MTK_INTERNAL_CDEFS := $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_NAME),$(if $(filter-out no NO none NONE false FALSE,$($(t))),-D$(t)))
+MTK_INTERNAL_CDEFS += $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_VALUE),$(if $(filter-out no NO none NONE false FALSE,$($(t))),$(foreach v,$(shell echo $($(t)) | tr '[a-z]' '[A-Z]'),-D$(v)))) 
+MTK_INTERNAL_CDEFS += $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_NAME_VALUE),$(if $(filter-out no NO none NONE false FALSE,$($(t))),-D$(t)=\"$($(t))\"))
+
+COMMON_GLOBAL_CFLAGS += $(MTK_INTERNAL_CDEFS)
+COMMON_GLOBAL_CPPFLAGS += $(MTK_INTERNAL_CDEFS
+
 # MTK Hardware
 BOARD_USES_MTK_HARDWARE := true
 BOARD_HAS_MTK_HARDWARE := true
